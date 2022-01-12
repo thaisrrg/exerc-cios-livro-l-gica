@@ -1,0 +1,22 @@
+<script>
+function pulaLinha(){
+ document.write("<br>")
+}
+
+function mostra(frase){
+ document.write(frase);
+ pulaLinha();
+} 
+function calculaIMC(nome,alturaDoUsuario,pesoDoUsuario) {
+  var imc = pesoDoUsuario/ (alturaDoUsuario * alturaDoUsuario);
+  return imc.toFixed(2);
+}
+var nome = prompt("Ola, qual é seu nome?");
+var alturaDoUsuario = prompt(nome + ", Qual e a sua altura?");
+var pesoDoUsuario = prompt("E o seu peso?");
+var imc = calculaIMC(nome,alturaDoUsuario,pesoDoUsuario);
+mostra("O seu IMC e " + imc);
+mostra("Voce ainda esta " + (imc - 18.5) + " pontos acima do limite da Magreza");
+mostra("Voce esta " + ( 35 - Math.round(imc)) + "pontos distante de chegar na obesidade severa, que tem como índice 35");
+
+</script>
